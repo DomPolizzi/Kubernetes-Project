@@ -112,5 +112,5 @@ def _get_jwt(user_data):
     return jwt.encode(payload, JWT_SECRET, algorithm='HS256')
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':~
     APP.run(port=8080, debug=True)

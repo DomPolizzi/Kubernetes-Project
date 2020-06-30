@@ -6,17 +6,17 @@ Description: EKSWSV1
 
 Parameters:
 
-  EksClusterName:
+  EksClusterName: 
     Type: String
-    Description: The name of the EKS cluster created
+    Description: simple-jwt-api
     Default: 
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
 
-  GitSourceRepo:
+  GitSourceRepo: 
     Type: String
-    Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
+    Description: https://github.com/FinnVoid/Kubernetes-Project
     Default: 
     MinLength: 1
     MaxLength: 100
@@ -30,18 +30,18 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository branch name
 
-  GitHubToken:
+  GitHubToken: 
     Type: String
     NoEcho: true
-    Description: GitHub API token - see https://github.com/blog/1509-personal-api-tokens
+    Description: 56edd32968e5c11c3db0f4992338982c93454618
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub personal access token
 
-  GitHubUser:
+  GitHubUser: 
     Type: String
     Default:
-    Description: GitHub username or organization
+    Description: FinnVoid
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub username or organization
@@ -54,10 +54,10 @@ Parameters:
     MaxLength: 100
     ConstraintDescription: You must enter a CodeBuild Docker image
 
-  KubectlRoleName:
+  KubectlRoleName: 
     Type: String
     Default: 
-    Description: IAM role used by kubectl to interact with EKS cluster
+    Description: FinnVoid
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a kubectl IAM role
