@@ -8,16 +8,16 @@ Parameters:
 
   EksClusterName: 
     Type: String
-    Description: simple-jwt-api
-    Default: 
+    Description: The name of the EKS cluster created
+    Default: simple-jwt-api
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
 
   GitSourceRepo: 
     Type: String
-    Description: https://github.com/FinnVoid/Kubernetes-Project
-    Default: 
+    Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
+    Default: https://github.com/FinnVoid/Kubernetes-Project
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
@@ -33,15 +33,16 @@ Parameters:
   GitHubToken: 
     Type: String
     NoEcho: true
-    Description: 56edd32968e5c11c3db0f4992338982c93454618
+    Default: 56edd32968e5c11c3db0f4992338982c93454618
+    Description: GitHub API token
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub personal access token
 
   GitHubUser: 
     Type: String
-    Default:
-    Description: FinnVoid
+    Default: FinnVoid
+    Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub username or organization
@@ -56,8 +57,8 @@ Parameters:
 
   KubectlRoleName: 
     Type: String
-    Default: 
-    Description: FinnVoid
+    Default: UdacityFlaskDeployCBKubectlRole
+    Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a kubectl IAM role
